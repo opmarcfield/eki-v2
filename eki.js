@@ -38,6 +38,49 @@ client.on("message", async message => {
   // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
   // command = say
   // args = ["Is", "this", "the", "real", "life?"]
+  bot.on('message', function (user, userID, channelID, message, evt) {
+    // Our bot needs to know if it will execute a command
+    // It will listen for messages that will start with `!`
+    if (message.substring(0, 1) == '.') {
+        var args = message.substring(1).split(' ');
+        var cmd = args[0];
+       
+        args = args.splice(1);
+        switch(cmd) {
+            // !ping
+            case 'tervetuloaa':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Kiitti hei! hyvä olla tääl :D niille jotka ei tunne nii oon opan kamu eki'
+                });
+            break;
+            case 'tänääa':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'en kyl tiä, hyvä kyssäri! mitäs @opa sul mieles?'
+                });
+            break;
+            case 'ekii':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'sori hei mä en hirveen usein lue tätä :D'
+                });
+            break;
+            case 'mikset':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'en mä tiiä ketä nää muut tyypit on :D miks eet lisäsit mut tänne? '
+                });
+            break;
+            case 'mites':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'joo kiitti! sori hermoilusta'
+                });
+            break;
+
+            // Just add any case commands if you want to..
+         }
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
