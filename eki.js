@@ -25,7 +25,7 @@ client.on("message", (message) => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   if (message.content.startsWith(prefix + "help")) {
-    message.channel.send("Beta-eki täs moro. En osaa viel oikein mitään. Admin @Opa osaa mua vähän komentaa, mut muiden komennot rajottuu aika pieniin. 'Ekikomennot' for more info");
+    message.channel.send("Beta-eki täs moro. En osaa viel oikein mitään. Admin @Opa osaa mua vähän komentaa, mut muiden komennot rajottuu aika pieniin. 'ekikomennot' for more info");
   } else
 
   if (message.content.startsWith(prefix + "komennot")) {
