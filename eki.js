@@ -20,6 +20,7 @@ client.on("guildDelete", guild => {
 });
 
 const prefix = "eki"
+const swearWords = ["vittu", "saatana", "vitun", "fuck", "perkele", "vitu"];
 const responseObject = {
   "ayy": "Ayy, lmao!",
   "vois": "vois ei tarkota kyllä, eikä ei. vois on legendaarinen vastaus jolla ei sitouduta mihinkään",
@@ -33,6 +34,7 @@ const responseObject = {
   "Mitäs tänää?": "niimpä, mitäs tänää?",
   "hä": "hä?",
 };
+
 client.on("message", (message) => {
   if(responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
@@ -64,6 +66,10 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "lokaatio")) {
     message.channel.send("Mun ruumis on täällä: https://github.com/opmarcfield/eki-v2 ja mun sielu on Herokussa ");
   }
+  if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply(">2018 ja kiroilee");
+  // Or just do message.delete();
+}
 });
 
 
