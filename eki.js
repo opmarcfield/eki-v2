@@ -40,7 +40,6 @@ client.on("message", (message) => {
   }
 });
 client.on("message", (message) => {
-  const swearWords = ["vittu", "saatana", "vitun", "fuck", "perkele", "vitu"];
   // this happens when a message is received
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -66,10 +65,6 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "lokaatio")) {
     message.channel.send("Mun ruumis on täällä: https://github.com/opmarcfield/eki-v2 ja mun sielu on Herokussa ");
   }
-  if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply(">2018 ja kiroilee");
-  // Or just do message.delete();
-}
 });
 
 
