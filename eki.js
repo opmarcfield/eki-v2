@@ -24,7 +24,7 @@ const responseObject = {
   "ayy": "Ayy, lmao!",
   "wat": "Say what?",
   "lol": "roflmaotntpmp"
-  "fornite": "loll nörde fortnite skidi"
+  "fornite": "loll pelihullu fortnite skidi"
   "kalja": "kalja mainittu! Mun iskä @Opa on pyrkiny vähentää"
 };
 client.on("message", (message) => {
