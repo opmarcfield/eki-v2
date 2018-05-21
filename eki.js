@@ -40,6 +40,12 @@ client.on("message", (message) => {
   }
 });
 client.on("message", (message) => {
+  if (message.content.startsWith(prefix + " add")) || message.member.roles.find("name", "Admin") {
+    message.channel.send("XP adding system not functional yet");
+  } else message.channel.send("Your rank doesnt allow that ")
+  }
+});
+client.on("message", (message) => {
   // this happens when a message is received
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -65,9 +71,6 @@ client.on("message", (message) => {
   if (message.content.startsWith(prefix + "lokaatio")) {
     message.channel.send("Mun ruumis on täällä: https://github.com/opmarcfield/eki-v2 ja mun sielu on Herokussa ");
   }
-  if (message.content.startsWith(prefix + " add") || message.member.roles.find("name", "Admin")) {
-    message.channel.send("XP adding system not functional yet");
-  } else message.channel.send("Your rank doesnt allow that");
 });
 
 
