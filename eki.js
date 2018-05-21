@@ -20,6 +20,18 @@ client.on("guildDelete", guild => {
 });
 
 const prefix = "eki"
+const responseObject = {
+  "ayy": "Ayy, lmao!",
+  "wat": "Say what?",
+  "lol": "roflmaotntpmp"
+  "fornite": "loll nörde fortnite skidi"
+  "kalja": "kalja mainittu! Mun iskä @Opa on pyrkiny vähentää"
+};
+client.on("message", (message) => {
+  if(responseObject[message.content]) {
+    message.channel.send(responseObject[message.content]);
+  }
+});
 client.on("message", (message) => {
   // this happens when a message is received
   if (!message.content.startsWith(prefix) || message.author.bot) return;
