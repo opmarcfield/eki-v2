@@ -22,8 +22,15 @@ client.on("guildDelete", guild => {
 const prefix = "eki"
 const responseObject = {
   "ayy": "Ayy, lmao!",
+  "Ayy": "Ayy, lmao!",
   "wat": "Say what?",
-  "lol": "roflmaotntpmp"
+  "wat": "Say what?",
+  "lol": "hahah lolll",
+  "Lol": "loll :D",
+  "haha": "hahaha :D",
+  "Haha": "hahahhha :D aika hauska",
+  "Mitäs tänää?": "niimpä, mitäs tänää?",
+  "hä": "hä?",
 };
 client.on("message", (message) => {
   if(responseObject[message.content]) {
@@ -39,7 +46,7 @@ client.on("message", (message) => {
   } else
 
   if (message.content.startsWith(prefix + "komennot")) {
-    message.channel.send("Meikän komennot: ekihauku, ekikehu, ekiauta, ekisoita");
+    message.channel.send("Meikän komennot: ekihauku, ekikehu, ekiauta, ekisoita, ekilokaatio");
   }
   if (message.content.startsWith(prefix + "hauku")) {
     message.channel.send("Vittu mikä pelle! Hommaa muija");
@@ -52,6 +59,9 @@ client.on("message", (message) => {
   }
   if (message.content.startsWith(prefix + "soita")) {
     message.channel.send("Valitetavasti en osaa soittaa muuta kun KPOP tällä hetkellä");
+  }
+  if (message.content.startsWith(prefix + "lokaatio")) {
+    message.channel.send("Mun ruumis on täällä: https://github.com/opmarcfield/eki-v2 ja mun sielu on Herokussa ");
   }
 });
 
