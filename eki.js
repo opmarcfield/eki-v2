@@ -77,7 +77,7 @@ client.on("message", message => {
   prefix = prefixMention.match(message.content) ? message.content.match(prefixMention)[0] + " " : prefix;
 
   message.channel.send("Moro! ekihelp or ekikomennot jos haluut apua. Jos vaan haluut et huutelen jotain, koita keksiä mikä mua kiinnostaa");
-}
+});
 
 
 client.login(process.env.TOKEN);
