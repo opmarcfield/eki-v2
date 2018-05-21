@@ -20,7 +20,6 @@ client.on("guildDelete", guild => {
 });
 
 const prefix = "eki"
-const swearWords = ["vittu", "saatana", "vitun", "fuck", "perkele", "vitu"];
 const responseObject = {
   "ayy": "Ayy, lmao!",
   "vois": "vois ei tarkota kyllä, eikä ei. vois on legendaarinen vastaus jolla ei sitouduta mihinkään",
@@ -41,6 +40,7 @@ client.on("message", (message) => {
   }
 });
 client.on("message", (message) => {
+  const swearWords = ["vittu", "saatana", "vitun", "fuck", "perkele", "vitu"];
   // this happens when a message is received
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
