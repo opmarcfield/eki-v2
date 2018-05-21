@@ -39,12 +39,12 @@ client.on("message", (message) => {
     message.channel.send(responseObject[message.content]);
   }
 });
-client.on("message", (message) => {
-  if (message.content.startsWith(prefix + " add") || message.member.roles.find("name", "Admin")) {
-    message.channel.send("XP adding system not functional yet");
-  } else message.channel.send("Your rank doesnt allow that ");
-  }
-});
+// client.on("message", (message) => {
+//  if (message.content.startsWith(prefix + " add") || message.member.roles.find("name", "Admin")) {
+//    message.channel.send("XP adding system not functional yet");
+// } else message.channel.send("Your rank doesnt allow that ");
+//  }
+// });
 client.on("message", (message) => {
   // this happens when a message is received
   if (!message.content.startsWith(prefix) || message.author.bot) return;
