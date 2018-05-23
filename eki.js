@@ -98,7 +98,7 @@ client.on("message", async message => {
   if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
     // To get the "message" itself we join the `args` back into a string with spaces: 
-       if(!message.member.roles.some(r=>["Admin"].includes(r.name)) )
+       if(!message.member.roles.some(r=>["Admin", "Mode", "Mode 1.1"].includes(r.name)) )
       return message.reply("I'm terribly sorry, but your rank is too low");
     const sayMessage = args.join(" ");
     // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
@@ -112,6 +112,12 @@ client.on("message", async message => {
       return message.reply("I'm terribly sorry, but your rank is too low");
 
     message.channel.send("XP system development in process");
+  }
+  if(command === " tell 'em") {
+        if(!message.member.roles.some(r=>["Admin"].includes(r.name)) )
+      return message.reply("don't tell me what to do ");
+
+    message.channel.send("Even mods can use say! now! enjoy your anonymity");
   }
 });
 
