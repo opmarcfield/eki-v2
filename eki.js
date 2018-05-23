@@ -113,7 +113,7 @@ client.on("message", async message => {
 
     message.channel.send("XP system development in process");
   }
-  if(command === " tell 'em") {
+  if(command === "kerro") {
         if(!message.member.roles.some(r=>["Admin"].includes(r.name)) )
       return message.reply("don't tell me what to do ");
 
