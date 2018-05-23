@@ -117,7 +117,7 @@ client.on("message", async message => {
         if(!message.member.roles.some(r=>["Admin"].includes(r.name)) )
       return message.reply("don't tell me what to do ");
 
-    message.channel.send("Even mods can use say! now! enjoy your anonymity");
+    message.channel.send("Even mods can use command 'say!' now, enjoy your anonymity!");
   }
 });
 
