@@ -46,8 +46,13 @@ client.on("message", (message) => {
 
   if (message.content.startsWith(prefix + "help")) {
     message.channel.send("Beta-eki täs moro. En osaa viel oikein mitään. Admin @Opa osaa mua vähän komentaa, mut muiden komennot rajottuu aika pieniin. 'ekikomennot' for more info");
-  } else
-
+  } 
+  
+  if (message.content === 'what is my avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
+  
   if (message.content.startsWith(prefix + "komennot")) {
     message.channel.send("Meikän komennot: ekihauku, ekikehu, ekiauta, ekisoita, ekilokaatio");
   }
