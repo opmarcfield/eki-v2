@@ -49,6 +49,12 @@ client.on('message', message=> {
 }
 });
 
+client.on('message', message=> {
+    if (message.isMentioned(client.user)) {
+    message.reply('Hä? Eki täs, mitä ny? 'ekihelp' for info or drop me a DM');
+}
+});
+
 client.on("message", (message) => {
   if(responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
