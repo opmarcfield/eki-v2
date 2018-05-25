@@ -35,6 +35,18 @@ const responseObject = {
   "haloo": "haloo @everyone",
 };
 
+const swearWords = ["vittu", "vitun", "vitu", "saatana", "paska", "perkele"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("Kiroilu on cool :)");
+  // Or just do message.delete();
+}
+
+client.on('message', message=> {
+    if (message.isMentioned(client.users.get('2749')) {
+    message.reply('Master @Opa...you have been summoned');
+}
+});
+
 client.on("message", (message) => {
   if(responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
