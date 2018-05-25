@@ -42,7 +42,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 }
 
 client.on('message', message=> {
-    if (message.isMentioned(client.users.get('2749')) {
+    if (message.isMentioned(client.users.get('2749'))) {
     message.reply('Master @Opa...you have been summoned');
 }
 });
