@@ -24,7 +24,7 @@ const responseObject = {
   "ayy": "Ayy, lmao!",
   "vois": "vois ei tarkota kyllä, eikä ei. vois on legendaarinen vastaus jolla ei sitouduta mihinkään",
   "Ayy": "Ayy, lmao!",
-  "wat": "Say what?",
+  "Wat": "Say what?",
   "wat": "Say what?",
   "lol": "hahah lolll",
   "Lol": "loll :D",
@@ -32,6 +32,7 @@ const responseObject = {
   "Haha": "hahahhha :D aika hauska",
   "Mitäs tänää?": "niimpä, mitäs tänää?",
   "hä": "hä?",
+  "haloo": "haloo @everyone",
 };
 
 client.on("message", (message) => {
