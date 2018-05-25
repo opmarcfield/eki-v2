@@ -45,7 +45,6 @@ client.on("message", message => {
   const prefixMention = new RegExp(`^<@!?${client.user.id}> `);
   prefix = prefixMention.match(message.content) ? message.content.match(prefixMention)[0] + " " : prefix;
 
-  message.channel.send("Hä? Eki täs. 'ekihelp' jos on jotai. Tai pistä DM (älybotti in the making)");
 });    
 
 client.on("message", (message) => {
