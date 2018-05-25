@@ -35,7 +35,7 @@ const responseObject = {
   "haloo": "haloo @everyone",
 };
 
-const swearWords = ["vittu", "vitun", "vitu", "saatana", "paska", "perkele"];
+const swearWords = ["vittu", "vitun", "vitu", "saatana", "paska", "perkele", "Vittu", "Vitun", "Vitu", "Saatana", "Paska", "Perkele"]];
 client.on("message", (message) => {
 if( swearWords.some(word => message.content.includes(word)) ) {
   message.reply("Kiroilu on cool :)");
