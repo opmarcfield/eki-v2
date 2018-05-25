@@ -53,7 +53,7 @@ if( targaryantopics.some(word => message.content.includes(word)) ) {
 });
 
 client.on('message', message=> {
-    if (message.isMentioned(client.users.get('374297893953077259'))) {
+    if (message.isMentioned(client.users.get('375767320070717440'))) {
     message.reply('Master @Opa...you have been summoned');
 }
 });
