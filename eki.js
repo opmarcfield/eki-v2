@@ -36,10 +36,12 @@ const responseObject = {
 };
 
 const swearWords = ["vittu", "vitun", "vitu", "saatana", "paska", "perkele"];
+client.on("message", (message) => {
 if( swearWords.some(word => message.content.includes(word)) ) {
   message.reply("Kiroilu on cool :)");
   // Or just do message.delete();
-}
+  }
+});
 
 client.on('message', message=> {
     if (message.isMentioned(client.users.get('2749'))) {
