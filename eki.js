@@ -41,17 +41,20 @@ client.on("message", (message) => {
 });
 
 client.on("message", (message) => {
+  // If the message is "what is my avatar"
+  if (message.content === 'What is my avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
+});
+
+client.on("message", (message) => {
   // this happens when a message is received
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   if (message.content.startsWith(prefix + "help")) {
     message.channel.send("Beta-eki täs moro. En osaa viel oikein mitään. Admin @Opa osaa mua vähän komentaa, mut muiden komennot rajottuu aika pieniin. 'ekikomennot' for more info");
   } 
-  
-  if (message.content === 'what is my avatar') {
-    // Send the user's avatar URL
-    message.reply(message.author.avatarURL);
-  }
   
   if (message.content.startsWith(prefix + "komennot")) {
     message.channel.send("Meikän komennot: ekihauku, ekikehu, ekiauta, ekisoita, ekilokaatio");
