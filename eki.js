@@ -47,7 +47,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 const targaryantopics = ["fortnite", "Fortnite"];
 client.on("message", (message) => {
 if( targaryantopics.some(word => message.content.includes(word)) ) {
-  message.reply("tiesikkö et fortnite on tosi suosittua lapsien keskuudessa :D");
+  message.reply("eiks tota peliä pelaa aika paljo just lapset? :D");
   // Or just do message.delete();
   }
 });
