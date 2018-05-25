@@ -23,6 +23,7 @@ const prefix = "eki"
 const responseObject = {
   "ayy": "Ayy, lmao!",
   "vois": "vois ei tarkota kyllä, eikä ei. vois on legendaarinen vastaus jolla ei sitouduta mihinkään",
+  "Vois": "vois ei tarkota kyllä, eikä ei. vois on legendaarinen vastaus jolla ei sitouduta mihinkään",
   "Ayy": "Ayy, lmao!",
   "Wat": "Say what?",
   "wat": "Say what?",
