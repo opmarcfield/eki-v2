@@ -44,6 +44,14 @@ if( swearWords.some(word => message.content.includes(word)) ) {
   }
 });
 
+const targaryantopics = ["fortnite", "Fortnite"];
+client.on("message", (message) => {
+if( targaryantopics.some(word => message.content.includes(word)) ) {
+  message.reply("tiesikkö et fortnite on tosi suosittua lapsien keskuudessa :D");
+  // Or just do message.delete();
+  }
+});
+
 client.on('message', message=> {
     if (message.isMentioned(client.users.get('2749'))) {
     message.reply('Master @Opa...you have been summoned');
@@ -82,19 +90,19 @@ client.on("message", (message) => {
     message.channel.send("Meikän komennot: ekihauku, ekikehu, ekiauta, ekisoita, ekilokaatio");
   }
   if (message.content.startsWith(prefix + "hauku")) {
-    message.channel.send("Vittu mikä pelle! Hommaa muija");
+    message.reply("Vittu mikä pelle! Hommaa muija");
   }
   if (message.content.startsWith(prefix + "kehu")) {
-    message.channel.send("Vittu mikä sonni! Hyvä ja komee rikas tyyppi!");
+    message.reply("Vittu mikä sonni! Hyvä ja komee rikas tyyppi!");
   }
   if (message.content.startsWith(prefix + "auta")) {
-    message.channel.send("Valitetavasti en osaa auttaa");
+    message.reply("Valitetavasti en osaa auttaa");
   }
   if (message.content.startsWith(prefix + "soita")) {
-    message.channel.send("Valitetavasti en osaa soittaa muuta kun KPOP tällä hetkellä");
+    message.reply("Valitetavasti en osaa soittaa muuta kun KPOP tällä hetkellä");
   }
   if (message.content.startsWith(prefix + "lokaatio")) {
-    message.channel.send("Mun ruumis on täällä: https://github.com/opmarcfield/eki-v2 ja mun sielu on Herokussa ");
+    message.reply("Mun ruumis on täällä: https://github.com/opmarcfield/eki-v2 ja mun sielu on Herokussa ");
   }
 });
 
