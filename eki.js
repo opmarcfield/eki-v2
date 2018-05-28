@@ -36,8 +36,10 @@ const responseObject = {
   "haloo": "haloo @everyone",
 };
 
-const swearWords = ["vittu", "vitun", "vitu", "saatana", "paska", "perkele", "Vittu", "Vitun", "Vitu", "Saatana", "Paska", "Perkele"];
+const swearWords = ["vittu", "vitun", "vitum", "saatana", "paska", "perkele", "Vittu", "Vitun", "Vitum", "Saatana", "Paska", "Perkele"];
 client.on("message", (message) => {
+   if (!message.author.bot) return;
+  
 if( swearWords.some(word => message.content.includes(word)) ) {
   message.reply("Kiroilu on cool :)");
   // Or just do message.delete();
@@ -46,6 +48,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 
 const targaryantopics = ["fortnite", "Fortnite"];
 client.on("message", (message) => {
+     if (!message.author.bot) return;
 if( targaryantopics.some(word => message.content.includes(word)) ) {
   message.reply("eiks tota peliä pelaa aika paljo just lapset? :D");
   // Or just do message.delete();
@@ -66,12 +69,14 @@ if( targaryantopics.some(word => message.content.includes(word)) ) {
 // NYT MENE EPÄIN VITTUA NÄILLÄ KOODEILLA
 
 client.on('message', message=> {
+    if (!message.author.bot) return;
     if (message.isMentioned(client.user)) {
     message.channel.send('Hä? Eki täs, mitä ny? "ekihelp" for info or drop me a DM');
 }
 });
 
 client.on("message", (message) => {
+     if (!message.author.bot) return;
   if(responseObject[message.content]) {
     message.channel.send(responseObject[message.content]);
   }
