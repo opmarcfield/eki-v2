@@ -84,10 +84,9 @@ client.on("message", (message) => {
 
 client.on("message", (message) => {
      if (message.author.bot) return;
-     if(!message.member.roles.some(r=>["Admin"].includes(r.name)) )
-  return message.reply("ha ha ha");
-
    if (message.content === 'eki self-destruct') {
+     if(!message.member.roles.some(r=>["Admin"].includes(r.name)) )
+  return message.reply("ha ha ha"); 
   let count = 0;
   let ecount = 0;
   for(let x = 0; x < 11; x++) {
