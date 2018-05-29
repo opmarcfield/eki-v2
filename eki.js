@@ -90,7 +90,7 @@ client.on("message", (message) => {
    if (message.content === 'eki self-destruct') {
   let count = 0;
   let ecount = 0;
-  for(let x = 0; x < 100; x++) {
+  for(let x = 0; x < 11; x++) {
     message.channel.send(`self-destruction in progress ${x} / 10`)
       .then(m => {
         count++;
