@@ -94,6 +94,23 @@ client.on("message", (message) => {
   // this happens when a message is received
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
+  if (message.content === 'imma queue pls') {
+  let count = 0;
+  let ecount = 0;
+  for(let x = 0; x < 4000; x++) {
+    message.channel.send(`this is message ${x} of 3999`)
+      .then(m => {
+        count++;
+        console.log('reached', count, ecount);
+      })
+      .catch(m => {
+        console.error(m);
+        ecount++;
+        console.log('reached', count, ecount);
+        });
+     }
+ }
+  
   if (message.content.startsWith(prefix + "help")) {
     message.channel.send("Beta-eki täs moro. En osaa viel oikein mitään. Admin @Opa osaa mua vähän komentaa, mut muiden komennot rajottuu aika pieniin. 'ekikomennot' for more info");
   } 
