@@ -73,25 +73,6 @@ client.on('message', message=> {
     if (message.isMentioned(client.user)) {
     message.channel.send('Hä? Eki täs, mitä ny? "ekihelp" for info or drop me a DM');
 }
-    if (message.content === 'eki self-destruct') || if(!message.member.roles.some(r=>["Admin"].includes(r.name)) )
-  return message.reply("ha ha ha");
-  else
-  {
-  let count = 0;
-  let ecount = 0;
-  for(let x = 0; x < 100; x++) {
-    message.channel.send(`self-destruction in progress ${x} of 100`)
-      .then(m => {
-        count++;
-        console.log('reached', count, ecount);
-      })
-      .catch(m => {
-        console.error(m);
-        ecount++;
-        console.log('reached', count, ecount);
-        });
-     }
- }
 });
 
 client.on("message", (message) => {
