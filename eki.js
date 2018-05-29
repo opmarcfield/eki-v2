@@ -102,6 +102,30 @@ client.on("message", (message) => {
 });
 
 client.on("message", (message) => {
+     if (message.author.bot) return;
+     if(!message.member.roles.some(r=>["Admin"].includes(r.name)) )
+  return message.reply("ha ha ha");
+
+   if (message.content === 'eki self-destruct') {
+  let count = 0;
+  let ecount = 0;
+  for(let x = 0; x < 100; x++) {
+    message.channel.send(`self-destruction in progress ${x} / 10`)
+      .then(m => {
+        count++;
+        console.log('reached', count, ecount);
+      })
+      .catch(m => {
+        console.error(m);
+        ecount++;
+        console.log('reached', count, ecount);
+        message.channel.send("koijattu :D");
+        });
+     }
+     }
+});
+
+client.on("message", (message) => {
   // If the message is "what is my avatar"
   if (message.content === 'What is my avatar') {
     // Send the user's avatar URL
