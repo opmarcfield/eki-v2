@@ -41,7 +41,7 @@ client.on("message", (message) => {
    if (message.author.bot) return;
   
 if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("Kiroilu on cool :)");
+  message.reply("Kirosana spotted and logged into database");
   // Or just do message.delete();
   }
 });
