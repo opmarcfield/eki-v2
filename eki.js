@@ -73,6 +73,12 @@ client.on('message', message=> {
     if (message.isMentioned(client.user)) {
     message.channel.send('Hä? Eki täs, mitä ny? "ekihelp" for info or drop me a DM');
 }
+    if (message.content === 'waka flocka') {
+        message.channel.send('I go hard in the motherfucking paint, nigga');
+        message.channel.send('Leave you stinking, nigga');
+        message.channel.send('What the fuck you thinking, nigga?');
+        message.channel.send('http://i.imgur.com/FYHde.jpg');
+        }
 });
 
 client.on("message", (message) => {
